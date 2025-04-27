@@ -1,0 +1,132 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    line-height: 1.5;
+  }
+  
+  /* TOPBAR */
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    padding: 1em 2em;
+  }
+  
+  .topbar h1 {
+    font-size: 1.5em;
+  }
+  
+  .topbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+  }
+  
+  .topbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .topbar ul li a:hover,
+  .topbar ul li a.active {
+    text-decoration: underline;
+  }
+  
+  /* AUTH SECTION */
+  .auth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+  }
+  
+  .auth-container {
+    background-color: #222;
+    padding: 2em;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  /* Formulaires */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    margin: 0.5em 0 0.2em;
+  }
+  
+  form input, form select {
+    padding: 0.8em;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 1em;
+  }
+  
+  .btn-cta {
+    background-color: #ff3b3b;
+    border: none;
+    border-radius: 4px;
+    padding: 0.8em;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .btn-cta:hover {
+    background-color: #e62e2e;
+  }
+  
+  /* TABLE */
+  table {
+    width: 100%;
+    margin-top: 1em;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    border: 1px solid #555;
+    padding: 0.8em;
+    text-align: center;
+  }
+  
+  table th {
+    background-color: #00cc66;
+  }
+  
+  .action-btn {
+    background-color: #00cc66;
+    color: white;
+    border: none;
+    padding: 0.5em;
+    margin: 0.2em;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .action-btn:hover {
+    background-color: #00b35c;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #000;
+    color: #aaa;
+    margin-top: 2em;
+  }
+  
