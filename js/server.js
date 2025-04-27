@@ -11,6 +11,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '..')));
 
+// Route par défaut pour rediriger vers /html/accounte.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'html', 'accounte.html'));
+});
+
 // Initialiser la base de données
 initDatabase();
 
@@ -255,44 +260,4 @@ app.get('/users', checkAdmin, selectFields, async (req, res) => {
 app.get('/users/:id', checkAdmin, selectFields, async (req, res) => {
   try {
     const fields = req.fields || ['id', 'nom', 'email', 'role'];
-    const [rows] = await promisePool.query(`SELECT ${fields.join(',')} FROM Utilisateur WHERE id = ?`, [req.params.id]);
-    if (rows.length === 0) return res.status(404).send('Utilisateur non trouvé');
-    res.json(rows[0]);
-  } catch (err) {
-    console.error('Erreur lors de la récupération de l\'utilisateur:', err);
-    res.status(500).send('Erreur lors de la récupération de l\'utilisateur');
-  }
-});
-
-app.put('/users/:id', checkAdmin, async (req, res) => {
-  const { nom, email, mdp, role } = req.body;
-  try {
-    const hashedPassword = mdp ? await bcrypt.hash(mdp, 10) : undefined;
-    const [result] = await promisePool.query(
-      'UPDATE Utilisateur SET nom = ?, email = ?, mdp = COALESCE(?, mdp), role = ? WHERE id = ?',
-      [nom, email, hashedPassword, role || 'utilisateur', req.params.id]
-    );
-    if (result.affectedRows === 0) return res.status(404).send('Utilisateur non trouvé');
-    res.send('Utilisateur mis à jour');
-  } catch (err) {
-    console.error('Erreur lors de la mise à jour de l\'utilisateur:', err);
-    res.status(500).send('Erreur lors de la mise à jour de l\'utilisateur');
-  }
-});
-
-app.delete('/users/:id', checkAdmin, async (req, res) => {
-  try {
-    const [result] = await promisePool.query('DELETE FROM Utilisateur WHERE id = ?', [req.params.id]);
-    if (result.affectedRows === 0) return res.status(404).send('Utilisateur non trouvé');
-    res.send('Utilisateur supprimé');
-  } catch (err) {
-    console.error('Erreur lors de la suppression de l\'utilisateur:', err);
-    res.status(500).send('Erreur lors de la suppression de l\'utilisateur');
-  }
-});
-
-// Démarrage du serveur
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Serveur démarré sur le port ${PORT}`);
-});
+    const [rows] = await promise
