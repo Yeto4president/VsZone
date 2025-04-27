@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestion des utilisateurs - VS Zone</title>
+  <link rel="stylesheet" href="../css/users.css">
+</head>
+<body>
+  <header>
+    <nav class="topbar">
+      <h1>VS Zone</h1>
+      <ul>
+        <li><a href="accueil.html">Accueil</a></li>
+        <li><a href="regle.html">Règles</a></li>
+        <li><a href="selectionner-theme.html">Sélectionner un thème</a></li>
+        <li><a href="accounte.html">Compte</a></li>
+        <li><a href="users.html" class="active">Utilisateurs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="auth-section">
+      <div class="auth-container">
+        <h2>Ajouter un utilisateur</h2>
+        <form id="addUserForm">
+          <label for="username">Nom :</label>
+          <input type="text" id="username" name="username" required>
+
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="password">Mot de passe :</label>
+          <input type="password" id="password" name="password" required>
+
+          <label for="role">Rôle :</label>
+          <select id="role" name="role" required>
+            <option value="utilisateur">Utilisateur</option>
+            <option value="admin">Admin</option>
+          </select>
+
+          <button type="submit" class="btn-cta">Ajouter</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="auth-section">
+      <div class="auth-container">
+        <h2>Liste des utilisateurs</h2>
+        <table id="userTable">
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Email</th>
+              <th>Rôle</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Les utilisateurs seront insérés ici en JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - VS Zone</p>
+  </footer>
+
+  <script src="../js/users.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sélectionner un thème - VS Zone</title>
+  <link rel="stylesheet" href="../css/selectionner-theme.css">
+</head>
+<body>
+  <header>
+    <nav class="topbar">
+      <h1>VS Zone</h1>
+      <ul>
+        <li><a href="accueil.html" class="active">Accueil</a></li>
+        <li><a href="regle.html">Règles</a></li>
+        <li><a href="selectionner-theme.html">Sélectionner un thème</a></li>
+        <li><a href="accounte.html">Compte</a></li>
+      </ul>
+    </nav>
+    <section class="hero">
+      <img src="../img/vs_zone.webp" alt="VS Zone" class="hero-image">
+      <div class="hero-content">
+        <h2>Sélectionnez votre thème</h2>
+        <p>Parcourez les thèmes disponibles et choisissez celui qui vous inspire.</p>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="theme-grid">
+      <div class="theme-card" onclick="startTournament('theme1')">
+        <img src="../img/jeux_de_societe.jpg" alt="Jeux De Société" class="hero-image">
+        <h3>Jeux De Société</h3>
+      </div>
+      <div class="theme-card" onclick="startTournament('theme2')">
+        <img src="../img/jeux_video.webp" alt="Jeux Vidéo" class="hero-image">
+        <h3>Jeux Vidéo</h3>
+      </div>      
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - VS Zone</p>
+  </footer>
+
+  <script src="../js/selectionner-theme.js"></script>
+</body>
+</html>
+

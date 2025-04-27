@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quizz en cours</title>
+  <link rel="stylesheet" href="../css/tournoi.css" />
+</head>
+<body>
+  <!-- Barre supérieure -->
+  <nav class="topbar">
+    <div class="title-left">Quizz en cours</div>
+    <!-- Bouton centré -->
+    <div class="btn-center">
+      <button class="btn-stop" onclick="stopQuiz()">Arrêter le quizz</button>
+    </div>
+  </nav>
+
+  <!-- Zone de jeu (tournoi) -->
+  <main>
+    <section class="game-area" id="gameArea">
+      <!-- Image de gauche -->
+      <div class="image-container">
+        <img id="leftImage" src="" alt="Image gauche" />
+        <p id="leftName"></p>
+        <button id="leftButton" class="btn-choice" onclick="selectChoice('left')">
+          Choisir
+        </button>
+      </div>
+
+      <!-- Logo VS au centre -->
+      <div class="vs-container">
+        <img class="vs-image" src="../img/vs_zone.webp" alt="VS" />
+      </div>
+
+      <!-- Image de droite -->
+      <div class="image-container">
+        <img id="rightImage" src="" alt="Image droite" />
+        <p id="rightName"></p>
+        <button id="rightButton" class="btn-choice" onclick="selectChoice('right')">
+          Choisir
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/tournoi.js"></script>
+</body>
+</html>

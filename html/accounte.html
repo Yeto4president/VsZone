@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Compte - VS Zone</title>
+  <link rel="stylesheet" href="../css/accounte.css">
+</head>
+<body>
+  <header>
+    <nav class="topbar">
+      <h1>VS Zone</h1>
+      <ul>
+        <li><a href="accueil.html">Accueil</a></li>
+        <li><a href="regle.html">Règles</a></li>
+        <li><a href="selectionner-theme.html">Sélectionner un thème</a></li>
+        <li><a href="accounte.html" class="active">Compte</a></li>
+        <li id="user-status"></li>
+      </ul>
+    </nav>
+    <!-- Alerte de connexion -->
+    <div id="connection-alert" class="connection-alert hidden"></div>
+  </header>
+
+  <main>
+    <section class="auth-section">
+      <div class="auth-container" id="auth-container">
+        <div class="tabs">
+          <button class="tab-button active" data-tab="login">Connexion</button>
+          <button class="tab-button" data-tab="register">Inscription</button>
+        </div>
+        <div class="tab-content" id="login">
+          <form id="loginForm">
+            <h2>Connexion</h2>
+            <label for="loginEmail">Email :</label>
+            <input type="email" id="loginEmail" name="loginEmail" required>
+            <label for="loginPassword">Mot de passe :</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
+            <button type="submit" class="btn-cta">Se connecter</button>
+          </form>
+        </div>
+        <div class="tab-content hidden" id="register">
+          <form id="registerForm">
+            <h2>Inscription</h2>
+            <label for="regUsername">Nom d'utilisateur :</label>
+            <input type="text" id="regUsername" name="regUsername" required>
+            <label for="regEmail">Email :</label>
+            <input type="email" id="regEmail" name="regEmail" required>
+            <label for="regPassword">Mot de passe :</label>
+            <input type="password" id="regPassword" name="regPassword" required>
+            <label for="regPasswordConfirm">Confirmer le mot de passe :</label>
+            <input type="password" id="regPasswordConfirm" name="regPasswordConfirm" required>
+            <button type="submit" class="btn-cta">S'inscrire</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 - VS Zone</p>
+  </footer>
+
+  <script src="../js/accounte.js"></script>
+</body>
+</html>
