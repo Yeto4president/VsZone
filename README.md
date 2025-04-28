@@ -149,6 +149,6 @@ Avant optimisation : 1.38 gCO2 par page (10 000 pages vues/mois : 13 800 gCO2).
 Après optimisation : 0.42 gCO2 par page (10 000 pages vues/mois : 4 200 gCO2), soit une réduction de 70 %.
 
 
-Détails dans le rapport Green IT (Rapport Green IT - VS Zone.pdf).
+Détails dans le rapport Green IT (Rapport Green IT.pdf).
 
 
